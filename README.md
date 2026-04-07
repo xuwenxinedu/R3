@@ -32,7 +32,7 @@ conda env create -n your_env -f environment.yaml
 
 You can download Amazon 2018 dataset through official website and process them with the processing code we provide. Then, you can get the dataset we use in our paper.
 
-'''bash
+```bash
 # Take the book dataset as an example
 # Download the dataset
 wget https://datarepo.eng.ucsd.edu/mcauley_group/data/amazon_v2/categoryFiles/Books.json.gz
@@ -42,7 +42,7 @@ gunzip Books.json.gz
 gunzip meta_Books.json.gz
 # Preprocess
 python ./data/process.py --category "Books"
-'''
+```
 
 ## Train and evaluation
 
@@ -69,4 +69,16 @@ You can tune more hyperparameters to get more impressive results.
 
 > **Note:**
 > - Results may vary across different devices even with the same hyperparameters, due to differences in computation precision. We conduct our experiments using 2 NVIDIA A100 GPUs.
+
+
+If you find our paper or code helpful to your work, please cite it.
+
+```
+@article{latentr3,
+  title={Reinforced latent reasoning for llm-based recommendation},
+  author={Zhang, Yang and Xu, Wenxin and Zhao, Xiaoyan and Wang, Wenjie and Feng, Fuli and He, Xiangnan and Chua, Tat-Seng},
+  journal={arXiv preprint arXiv:2505.19092},
+  year={2025}
+}
+```
 

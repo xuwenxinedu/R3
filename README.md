@@ -28,6 +28,22 @@
 conda env create -n your_env -f environment.yaml
 ```
 
+## Data process
+
+You can download Amazon 2018 dataset through official website and process them with the processing code we provide. Then, you can get the dataset we use in our paper.
+
+'''bash
+# Take the book dataset as an example
+# Download the dataset
+wget https://datarepo.eng.ucsd.edu/mcauley_group/data/amazon_v2/categoryFiles/Books.json.gz
+wget wget https://datarepo.eng.ucsd.edu/mcauley_group/data/amazon_v2/metaFiles2/meta_Books.json.gz
+# Unzip
+gunzip Books.json.gz
+gunzip meta_Books.json.gz
+# Preprocess
+python ./data/process.py --category "Books"
+'''
+
 ## Train and evaluation
 
 ```bash
